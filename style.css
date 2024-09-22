@@ -1,0 +1,708 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+
+
+body {
+    margin: 0;
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Для Chrome, Safari и Edge */
+}
+
+.container {
+    padding-left: 160px;  /* Отступ слева */
+    padding-right: 160px; /* Отступ справа */
+    box-sizing: border-box; /* Включаем padding в общую ширину */
+    max-width: 100%; /* Ограничение ширины контейнера, чтобы не выходил за пределы страницы */
+}
+
+header {
+    z-index: 1000;
+    width: 100%;
+    top: 0; /* Прикрепляем к верхней части страницы */
+    left: 0; /* Прикрепляем к левой части страницы */
+    padding: 20px 0%; /* Адаптивный padding в процентах */
+    justify-content: space-between;
+    box-sizing: border-box; 
+    display: flex;
+    background-color: white; /* Цвет фона, чтобы заголовок выделялся */
+    position: fixed;
+
+    padding-left: 160px;  /* Отступ слева */
+    padding-right: 160px; /* Отступ справа */
+}
+
+.left-content {
+    display: flex;
+    justify-content: space-between; /* Разделяет элементы по краям */
+    align-items: center; /* Выравнивает элементы по центру по вертикали */
+    width: 559px;
+    font-family: "Manrope";
+}
+
+/* Контейнер для логотипа */
+.logo-container {
+    display: flex; /* Используем Flexbox для горизонтального расположения */
+    align-items: center; /* Выровняем элементы по вертикали */
+    gap: 8px; /* Расстояние между фигурой и текстом */
+    height: 25.76px;
+    max-width: 114px; /* Ограничение на максимальный размер */
+    margin-right: 80px;
+}
+
+.logo-container:hover {
+    cursor: pointer;
+}
+
+/* Логотип */
+.shape {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    align-items: flex-end;
+    transform: rotate(45deg); /* Поворот всей формы */
+    gap: 1px; /* Управление расстоянием между прямоугольниками */
+    margin-bottom: 6px;
+}
+
+/* Прямоугольники */
+.rect {
+    background-color: #2F59ED;
+}
+
+/* Прямоугольники разных размеров */
+.rect:nth-child(1) {
+    width: 3.86px;
+    height: 6.61px;
+}
+
+.rect:nth-child(2) {
+    width: 3.86px;
+    height: 10.27px;
+}
+
+.rect:nth-child(3) {
+    width: 3.86px;
+    height: 14.36px;
+}
+
+
+.logo-text {
+    font-weight: 800;
+    font-size: 17.87px; /* Размер текста */
+    font-weight: bold; /* Жирный текст */
+    color: #2E343F; /* Цвет текста */
+}
+
+
+.horizontal-list {
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+    display: flex; /* Делаем элементы списка горизонтальными */
+    gap: 32px; /* Расстояние между пунктами меню */
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19.6px;
+    letter-spacing: 1px;
+
+}
+
+.horizontal-list li {
+    display: inline-block;
+}
+
+.horizontal-list a {
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+    color: black; /* Цвет текста */
+    padding: 10px 15px; /* Добавляем внутренние отступы */
+    transition: color 0.3s ease;
+}
+
+.horizontal-list a:hover {
+    color: rgb(157, 157, 157); /* Цвет ссылки при наведении */
+}
+
+
+
+
+
+
+
+
+.right-content {
+    display: flex;
+    justify-content: space-between;
+    width: 170px;
+    height: 30px;
+}
+
+.right-content .img {
+    width: 30px;
+    height: 30px;
+    padding: 3px 5px;
+    background-repeat: no-repeat; /* Запрещаем дублирование картинки */
+    background-position: center; /* Центрируем картинку внутри контейнера */
+    transition: filter 0.3s ease; /* Плавный переход для эффекта */
+}
+
+.right-content .img:hover {
+    cursor: pointer;
+    filter: brightness(1.5); /* Увеличиваем яркость на 50% */
+}
+
+.right-content .img:nth-child(1) {
+    background-image: url(./src/header/Shop.svg);
+}
+
+.right-content .img:nth-child(2) {
+    background-image: url(./src/header/Search.svg);
+}
+
+.right-content .img:nth-child(3) {
+    background-image: url(./src/header/Profile\ 2.svg);
+}
+
+
+
+
+.first-block {
+    background-image: url(./src/example/texture.png);
+    width: 2135.15px;
+    height: 1553.82px; /* Или другое значение */
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 977px; 
+    background-image: url(./src/example/texture.png);
+    background-size: cover; /* Масштабируем текстуру по всему блоку */
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(2, 3, 16, 0.836);
+}
+
+.blue-glow {
+    position: absolute;
+    width: 1700px; 
+    height: 1700px; 
+    top: 10%; /* Позиционируем относительно середины блока по вертикали */
+    left: 105%; /* Смещаем его за видимую часть справа */
+    transform: translate(-50%, -50%);
+    opacity: 0.9; /* Увеличение непрозрачности */
+    background: radial-gradient(circle, rgba(44, 255, 242, 0.4), rgba(44, 255, 242, 0) 60%); /* Меньший радиус растворения */
+    pointer-events: none; /* Чтобы круг не мешал кликам по контенту */
+}
+
+.pink-glow {
+    position: absolute;
+    width: 1300px; 
+    height: 1300px; 
+    top: 100%; /* Позиционируем относительно середины блока по вертикали */
+    left: 90%; /* Смещаем его за видимую часть справа */
+    transform: translate(-50%, -50%);
+    opacity: 0.9; /* Увеличение непрозрачности */
+    background: radial-gradient(circle, rgba(135, 84, 222, 0.4), rgba(135, 84, 222, 0) 60%); /* Меньший радиус растворения */
+    pointer-events: none; /* Чтобы круг не мешал кликам по контенту */
+}
+
+.red {
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+    top: 10%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    opacity: 0.6; /* Увеличение непрозрачности */
+    background: radial-gradient(circle, rgba(11, 193, 193, 0.1), rgba(11, 193, 193, 0) 70%); /* Меньший радиус растворения */
+    pointer-events: none; /* Чтобы круг не мешал кликам по контенту */
+}
+
+
+.content {
+    margin: 0 160px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: white;
+    padding: 38.5px 0;
+}
+
+.left-container {
+    display: inline-block; /* Позволяем контейнеру занимать только нужную высоту */
+}
+
+.left-container h1{
+    margin: 0;
+    font-family: Manrope;
+    font-size: 5vw; /* Адаптивный размер шрифта */
+    font-weight: 400;
+    line-height: 1.1; /* Пропорциональная высота строки */
+    text-align: left;
+}
+
+.left-container h5{
+    margin-top: 27px;
+    margin-bottom: 0;
+    font-family: Manrope;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 38.4px;
+    text-align: left;
+}
+
+button {
+    padding: 15px 24px;
+    background-color: #2F59ED;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    margin-top: 27px;
+    transition: background-color 0.3s ease;
+
+    font-family: Manrope;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21.86px;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+button:hover {
+    background-color: #4a73ff; /* Изменение цвета при наведении */
+}
+
+
+.right-container {
+    background-image: url(./src/example/graphic.png);
+    background-size: contain; /* Изображение масштабируется так, чтобы полностью поместиться в контейнер */
+    background-repeat: no-repeat; /* Изображение не будет повторяться */
+    background-position: center; /* Центрируем изображение внутри контейнера */
+    width: 100%; /* Ширина контейнера — 100% от родителя */
+    max-width: 788px; /* Максимальная ширина контейнера */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    aspect-ratio: 788 / 577; /* Соотношение сторон для поддержания пропорций */
+}
+
+
+
+
+
+
+
+.what-we-do {
+    width: 100%;
+    padding: 100px 0;
+    gap: 60px;
+}
+
+.what-we-do h2 {
+    font-family: Manrope;
+    font-size: 54px;
+    font-weight: 400;
+    line-height: 70.2px;
+    text-align: center;
+    margin: 0;
+}
+
+.box-container {
+    display: flex; /* Расположение коробок в ряд */
+    justify-content: space-between; /* Равномерное распределение коробок по ширине контейнера */
+    padding: 60px 0 0 0; /* Отступы внутри контейнера */
+}
+
+.box {
+    flex: 1; /* Коробки будут занимать равное пространство */
+    margin: 0 29px 0 0; /* Отступы между коробками */
+    border: 1px solid rgba(217, 217, 217, 1);
+    padding: 33px 29px; /* Отступы внутри коробки */
+    box-sizing: border-box; /* Учитывать отступы и границы в общей ширине */
+}
+
+.circle {
+    margin: 0;
+    width: 54px; /* Диаметр круга */
+    height: 54px; /* Диаметр круга */
+    border: 1px solid rgba(217, 217, 217, 1);
+    border-radius: 50%; /* Делаем элемент круглым */
+    display: flex; /* Чтобы центрировать контент внутри круга */
+    justify-content: center; /* Центрирование содержимого по горизонтали */
+    align-items: center; /* Центрирование содержимого по вертикали */
+}
+
+.box h5 {
+    margin: 8px 0 0 0;
+    font-family: Manrope;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 38.4px;
+    text-align: left;
+}
+
+.box p {
+    margin: 8px 0 0 0;
+    font-family: Manrope;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+}
+
+.box .circle .img {
+    width: 30px;
+    height: 30px;
+    padding: 3px 5px;
+    background-repeat: no-repeat; /* Запрещаем дублирование картинки */
+    background-position: center; /* Центрируем картинку внутри контейнера */
+    transition: filter 0.3s ease; /* Плавный переход для эффекта */
+}
+
+.box .circle .img:nth-child(1) {
+    background-image: url(./src/whatWeDo/icon.svg);
+}
+
+.box .circle .img:nth-child(2) {
+    background-image: url(./src/whatWeDo/icon2.svg);
+}
+
+.box .circle .img:nth-child(3) {
+    background-image: url(./src/whatWeDo/icon3.svg);
+}
+
+.box .circle .img:nth-child(4) {
+    background-image: url(./src/whatWeDo/icon4.svg);
+}
+
+
+
+
+
+
+
+.container-centered {
+    padding: 100px 0 100px 0;
+    display: flex; /* Расположение коробок в ряд */
+    justify-content: space-between; /* Равномерное распределение коробок по ширине контейнера */
+    align-items: center;
+}
+
+.container-centered .left-container {
+    width: 512px;
+}
+
+@media (max-width: 1600px) {
+    .left-container {
+        margin: 0 80px;
+    }
+}
+
+.container-centered h2 {
+    font-family: Manrope;
+    font-size: 54px;
+    font-weight: 400;
+    line-height: 70.2px;
+    text-align: left;
+    margin: 0;
+}
+
+.container-centered p {
+    margin-top: 30px;
+    font-family: Manrope;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: left;
+}
+
+.container-centered .img {
+    width: 785px;
+    height: 903px;  
+    background-image: url(./src/4thBlock/generic-content-pic.png);
+    background-size: contain; /* Изображение масштабируется так, чтобы полностью поместиться в контейнер */
+    background-repeat: no-repeat; /* Изображение не будет повторяться */
+}
+
+.img-container .img:nth-child(1){
+    margin-bottom: 40px;
+    width: 733px;
+    height: 447px;  
+    background-image: url(./src/5thBlock/generic-content-pic.png);
+    background-size: contain; /* Изображение масштабируется так, чтобы полностью поместиться в контейнер */
+    background-repeat: no-repeat; /* Изображение не будет повторяться */
+}
+
+ .img-container .img:nth-child(2){
+    width: 733px;
+    height: 447px;  
+    background-image: url(./src/5thBlock/generic-content-pic2.png);
+    background-size: contain; /* Изображение масштабируется так, чтобы полностью поместиться в контейнер */
+    background-repeat: no-repeat; /* Изображение не будет повторяться */
+}
+
+
+
+.gallery {
+        padding: 100px 0 100px 0;
+}
+
+.gallery h2{
+    font-family: Manrope;
+    font-size: 54px;
+    font-weight: 400;
+    line-height: 70.2px;
+    text-align: left;
+}
+
+.gallery  .img-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap
+}
+
+.element {
+    flex: 1 1 30%; /* Элементы занимают 30% ширины контейнера, могут сжиматься и расти */
+    margin: 10px; /* Отступ между элементами */
+}
+
+.element h5{
+    margin-top: 35px;
+}
+
+.gallery  .img-container .element:nth-child(1) .img {
+    width: 512.67px;
+    height: 584px;
+    background-image: url(./src/6thBlock/gallery-pic.png);
+    background-size: contain; /* Изображение масштабируется так, чтобы полностью поместиться в контейнер */
+    background-repeat: no-repeat; /* Изображение не будет повторяться */
+}
+
+.gallery  .img-container .element:nth-child(2) .img {
+    width: 512.67px;
+    height: 584px;
+    background-image: url(./src/6thBlock/gallery-pic2.png);
+    background-size: contain; /* Изображение масштабируется так, чтобы полностью поместиться в контейнер */
+    background-repeat: no-repeat; /* Изображение не будет повторяться */
+}
+
+.gallery  .img-container .element:nth-child(3) .img {
+    width: 512.67px;
+    height: 584px;
+    background-image: url(./src/6thBlock/gallery-pic3.png);
+    background-size: contain; /* Изображение масштабируется так, чтобы полностью поместиться в контейнер */
+    background-repeat: no-repeat; /* Изображение не будет повторяться */
+}
+
+.element h5 {
+    margin: 0;
+    font-family: Manrope;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19.6px;
+    letter-spacing: 1px;
+    text-align: left;
+    color: rgba(47, 89, 237, 1);
+}
+
+.element p {
+    margin-top: 7px;
+    font-family: Manrope;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 38.4px;
+    text-align: left;
+}
+
+
+
+
+
+.contact {
+    position: relative;
+    padding: 60px 60px;
+    
+}
+
+.grey-container {
+    text-align: center;
+    justify-content: center;
+    padding: 108px 0;
+    background: rgba(249, 249, 249, 1);
+    width: 100%;
+    height: auto; /* Автоматическая высота по содержимому */
+    box-sizing: border-box; /* Включаем padding в общую ширину и высоту */
+}
+
+.grey-container h2 {
+    font-family: Manrope;
+    font-size: 54px;
+    font-weight: 400;
+    line-height: 70.2px;
+    text-align: center;
+}
+
+.grey-container p {
+    font-family: Manrope;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 48px;
+    text-align: center;
+}
+
+
+
+
+footer {
+    background-color: #2e343f;
+    color: white;
+    padding: 100px 160px 40px 160px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer .left-container {
+    width: 650px;
+}
+
+footer .left-container h2{
+    margin-top: 0px;
+    font-family: Manrope;
+    font-size: 54px;
+    font-weight: 400;
+    line-height: 70.2px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+footer .left-container p{
+    font-family: Manrope;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+}
+
+.social-links {
+    margin-top: 30px;
+    display: flex;
+    width: 181px;
+    justify-content: space-between;
+}
+
+.social-links a{
+    text-decoration: none; /* Убираем подчеркивание */
+    color: rgba(255, 255, 255, 1);
+    font-family: Manrope;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 27.32px;
+    text-align: left;
+}
+
+.links {
+    display: flex;
+    width: 710px;
+    justify-content: space-between;
+}
+
+@media (max-width: 1800px) {
+    .links {
+        width: 510px;
+    }
+}
+
+@media (max-width: 1700px) {
+
+    .content {
+    margin: 0 80px;
+    }
+
+    .links {
+        width: 350px;
+    }
+    footer {
+        padding: 100px;
+    }
+    footer .left-container {
+        margin-left: 0;
+    }
+    .container {
+        padding-left: 100px;  /* Отступ слева */
+        padding-right: 100px; /* Отступ справа */
+        box-sizing: border-box; /* Включаем padding в общую ширину */
+        max-width: 100%; /* Ограничение ширины контейнера, чтобы не выходил за пределы страницы */
+    }
+}
+
+
+.links ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    margin: 0; /* Убираем отступы */
+    padding: 0; /* Убираем внутренние отступы */
+}
+
+.links-column {
+    display: flex;
+    flex-direction: column;
+    gap: 19px; /* Расстояние между всеми элементами */
+}
+
+.links-column h6 {
+    cursor: default;
+    margin: 0px;
+    font-family: Manrope;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+}
+
+
+.links-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Убираем отступы */
+}
+
+.links-column ul li:not(:last-child) {
+    margin-bottom: 19px; /* Добавляем отступ между элементами, кроме последнего */
+}
+
+.links-column ul li {
+    gap: 19px;
+}
+
+.links-column ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: Manrope;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25.2px;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+}
+
+.links-column ul li a:hover {
+    color: #6c6c6c;
+}
+
